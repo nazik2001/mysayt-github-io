@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MYSAYT</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>MYSAYT</span>
+    </div>
+    <div id="about">
+      <a href="#" title="ГОЛОВНА" onclick="slowScroll('#main')">ПРО СЕБЕ</a>
+      <a href="#" onclick="slowScroll('#overview')" title="">ПОСЛУГИ</a>
+      <a href="#" onclick="slowScroll('#contacts')" title=" КОНТАКТИ">КОНТАКТИ</a>
+      
+    
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>ПОРТФОЛІО</h1>
+    <h3>ВЕБ РОЗРОБНИКА!</h3>
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <h2>Мої послуги допоможуть вам</h2>
+      <span>Великий вибір моїх послуг</span>
+    </div>
+    <div class="text">
+      <span>  Мене звати Назар. Я народився у місті Почаїв 11 серпня 2001 року. Зараз я навчаюсь у "ЗУНУ"Західно-Український Національний Університет на факультеті ФКІТ.Я різностороння розвинена особистість. У мене є чимало занять, які мене захоплюють. Перше моє улюблене заняття - програмування,тому і пішов вчитись на факультет комп'ютерної інженерії.
+      Я маю багато хобі. Інше моє захоплення - спорт. Я дуже люблю заняття у спортзалы та волейбол.  Також я практикуюсь обслуговувати та ремонтувати техніку. Я прагну реалізовувати себе у різних сферах такі як програміст веб-розробник. Тому, я сподіваюсь, що у майбутньому мої улюблені заняття принесуть мені користь. </span>
+    </div>
+  </div>
+
+  <div id="overview">
+    <h2>Розробка на:</h2>
+    <h4>C++,Java,HTML та CSS.</h4>
+
+   <div class="img">
+      <img src="imges/1.jpg.jpg" alt="">
+      <span>Розробка на JAVA</span>
+    </div>
+    <div class="img">
+      <img src="imges/2.jpeg" alt="">
+      <span>Розробка на C++</span>
+    </div>
+  </div>
+
+  <div id="contacts">
+    <center><h5>ЗВОРОТНІЙ ЗВ'ЯЗОК</h5></center>
+    <form id="form_input">
+      <label for="name">Ім'я <span>*</span></label><br>
+      <input type="text" placeholder="Введіть Ім'я" name="name" id="name"><br>
+      <label for="email">Ваша почта <span>*</span></label><br>
+			<input type="email" placeholder="Введіть email" name="email" id="email"><br>
+			<label for="message">Повідомлення <span>*</span></label><br>
+			<textarea placeholder="Введіть ваше повідомлення" name="message" id="message"></textarea><br>
+			<div id="mess_send" class="btn">Відправити</div>
+    </form>
+  </div>
+
+  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>
